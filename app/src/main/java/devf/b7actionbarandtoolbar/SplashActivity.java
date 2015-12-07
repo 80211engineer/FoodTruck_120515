@@ -1,16 +1,19 @@
 package devf.b7actionbarandtoolbar;
 
 /**
- * Created by Luis Galvan on 11/26/2015.
+ * Created by Luis Galvan on 12/4/2015.
  */
+
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
 import android.support.v7.app.AppCompatActivity;
 
-public class Splash extends AppCompatActivity {
 
-    private final int SPLASH_DISPLAY_LENGTH = 100;
+
+public class SplashActivity extends AppCompatActivity {
+
+    private final int SPLASH_DISPLAY_LENGTH = 1000;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -21,11 +24,12 @@ public class Splash extends AppCompatActivity {
             @Override
             public void run() {
                 /* Create an Intent that will start the Menu-Activity. */
-                Intent mainIntent = new Intent(Splash.this, MainActivity.class);
-                Splash.this.startActivity(mainIntent);
-                Splash.this.finish();
+                Intent mainIntent = new Intent(SplashActivity.this, login_Screen.class);
+                SplashActivity.this.startActivity(mainIntent);
+                SplashActivity.this.finish();
             }
         }, SPLASH_DISPLAY_LENGTH);
     }
 
 }
+

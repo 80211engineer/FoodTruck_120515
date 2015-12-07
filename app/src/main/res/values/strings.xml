@@ -25,4 +25,7 @@
     <string name="Text_Truck_Name">Truck Name</string>
     <string name="Text_Truck_TypeFood">Truck Type of Food</string>
     <string name="title_activity_spec_food_truck">SpecFoodTruck</string>
+    <string name="title_activity_fucking_shit2">FuckingShit2</string>
+    <string name="title_activity_login__screen">login_Screen</string>
+    <string name="Busqueda">Busqueda</string>
 </resources>

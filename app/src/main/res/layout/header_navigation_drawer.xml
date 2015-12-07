@@ -2,17 +2,43 @@
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:background="@color/primary">
+    android:background="@color/primary"
+    android:layout_gravity="center">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="140dp"
+        android:orientation="horizontal">
 
 
     <de.hdodenhof.circleimageview.CircleImageView
-        android:layout_width="200dp"
-        android:layout_height="200dp"
-        android:layout_marginLeft="16dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="41dp"
+        android:layout_width="72dp"
+        android:layout_height="72dp"
+        android:layout_marginLeft="24dp"
+        android:layout_marginTop="24dp"
         android:scaleType="centerCrop"
-        android:src="@drawable/myself" />
+        android:src="@drawable/myself"
+        android:paddingBottom="10dp"
+        android:layout_gravity="center"/>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Jorge Lerma"
+            android:textSize="14sp"/>
+    </LinearLayout>
+
+
+    </LinearLayout>
 
 
 </FrameLayout>

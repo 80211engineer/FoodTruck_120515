@@ -17,16 +17,22 @@ import android.widget.Toast;
 import java.util.ArrayList;
 import java.util.List;
 
+import devf.b7actionbarandtoolbar.ActTruckComment;
+import devf.b7actionbarandtoolbar.FuckingShit2;
+import devf.b7actionbarandtoolbar.Fucking_shit;
 import devf.b7actionbarandtoolbar.R;
 import devf.b7actionbarandtoolbar.SpecFoodTruck;
 import devf.b7actionbarandtoolbar.adapters.TruckAdapter;
+import devf.b7actionbarandtoolbar.interfaces.AdapterCallback;
+import devf.b7actionbarandtoolbar.interfaces.AdapterCallback2;
 import devf.b7actionbarandtoolbar.interfaces.MyOwnListener;
 import devf.b7actionbarandtoolbar.model.TruckFood;
 
 /**
  * Created by Luis Galvan on 11/29/2015.
  */
-public class TruckFragment extends Fragment {
+
+public class TruckFragment extends Fragment implements AdapterCallback2 {
 
 
 
@@ -35,6 +41,8 @@ public class TruckFragment extends Fragment {
     private List<TruckFood> truckFoodList;
 
     private String TAG = "¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿  =   ";
+
+    private int AverageGradeDone;
 
 
 
@@ -85,6 +93,11 @@ public class TruckFragment extends Fragment {
         // *****
         mRecyclerView2.setLayoutManager(new LinearLayoutManager(getActivity(), LinearLayoutManager.VERTICAL, false));
         mRecyclerView2.setAdapter(truckAdapter);
+
+        // CALLING AVEREGE GRADE
+        final int temp = truckAdapter.averageReturner();
+
+
         truckAdapter.setOnItemClickListener(new MyOwnListener() {
             @Override
             public void onItemClick(int position, View view, TruckFood truckFood) {
@@ -92,21 +105,34 @@ public class TruckFragment extends Fragment {
                 String mTypeFood = truckFood.getTtypefood();
                 String mName = truckFood.getTname();
                 int mImagez = truckFood.getTimage();
+                int mGradez = truckFood.getTstars();
+
+                int mGradezT = temp;
 
 
-                Intent intentActivity = new Intent(getActivity(), SpecFoodTruck.class);
+                Log.e(TAG, " ///////////// FUC " + String.valueOf(mGradez));
 
+                // ##### THIS IS WORKING ON
+
+//                Intent intentActivity = new Intent(getActivity(), SpecFoodTruck.class);
+
+                Intent intentActivity = new Intent(getActivity(), FuckingShit2.class);
 
 
                 intentActivity.putExtra("my_key", mName);
                 intentActivity.putExtra("my_keyz", mImagez);
+                intentActivity.putExtra("my_keyz2", mGradezT);
+
+                // *********  COMMENTED IMPLEMENT ActTruckComment
+                /*
+                intentActivity.putExtra("my_key", mName);
+                intentActivity.putExtra("my_keyz", mImagez);
                 intentActivity.putExtra("my_keyz2", mTypeFood);
+                */
+
 
                 startActivity(intentActivity);
 
-
-
-                Log.e(TAG, " FUC " + position + "  " + mName);
 
             }
         });
@@ -137,7 +163,9 @@ public class TruckFragment extends Fragment {
 
         for(int i=0; i<12; i++){
 
-            foodTruckers.add(new TruckFood("Best", R.drawable.jack_logo, "Jack in the Box", 8, "Fast Food"));
+            foodTruckers.add(new TruckFood("Best", R.drawable.barra_vieja_smallj, "Jack in the Box", i, "Fast Food"));
+            foodTruckers.add(new TruckFood("Best", R.drawable.rockin_taco_logo, "Rockin' Taco", i, "Fast Food, tacos"));
+            foodTruckers.add(new TruckFood("Best", R.drawable.primario_logo_small, "Primario, gourmet mexicano.", i, "Food Truck, gourmet mexicano."));
         }
 
         return foodTruckers;
@@ -148,4 +176,8 @@ public class TruckFragment extends Fragment {
     }
 
 
+    @Override
+    public int onMyCallback(int num) {
+        return 0;
+    }
 }

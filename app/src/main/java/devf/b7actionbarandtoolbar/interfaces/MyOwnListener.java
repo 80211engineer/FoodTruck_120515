@@ -11,6 +11,8 @@ public interface MyOwnListener {
 
     public void onItemClick(int position,View view, TruckFood truckFood);
 
+
+
 }
 
 

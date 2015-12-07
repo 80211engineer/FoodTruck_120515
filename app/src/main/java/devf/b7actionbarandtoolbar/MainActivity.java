@@ -52,7 +52,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     private String TAG = "   ********************** This is it";
 
-    private String stringPasser;
+    private String stringPasser = "b";
 
 
     private ActionBarDrawerToggle mDrawerToggle;
@@ -109,7 +109,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
                 Fragment fragment;
                 switch (item.getItemId()) {
-                    case R.id.action_call:
+                    case R.id.action_favoritos:
 
                         stringPasser = "a";
 
@@ -137,20 +137,21 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
                         //fragment = new FragmentDynamic.newInstance("ok", 8)
 
-                        // INTENT ENTER, commented out
-                        /*
+
                         fragment = new CreateFragment();
                         replacerFragment(fragment, stringPasser);
+                        
+
+
+
+                        // FRAGMENT ENTER, commented out
+                        /*
+                        Intent intent = new Intent(MainActivity.this, Settingz.class);
+                        startActivity(intent);
                         */
 
-                        Intent intent = new Intent(MainActivity.this, favorites.class);
-                        startActivity(intent);
 
-
-
-
-
-                        Toast.makeText(MainActivity.this, "Configuracion", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(MainActivity.this, "Busqueda", Toast.LENGTH_SHORT).show();
                         break;
                     case R.id.action_map:
 
@@ -172,6 +173,29 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 //                        mapsActivity2 = new MapsActivity2();
 //                       replacerFragment(mapsActivity2);
 
+                        break;
+
+                    case R.id.action_settingz:
+
+                        stringPasser = "b";
+
+                        //fragment = new FragmentDynamic.newInstance("ok", 8)
+
+
+                        fragment = new CreateFragment();
+                        replacerFragment(fragment, stringPasser);
+
+
+
+
+                        // FRAGMENT ENTER, commented out
+                        /*
+                        Intent intent = new Intent(MainActivity.this, Settingz.class);
+                        startActivity(intent);
+                        */
+
+
+                        Toast.makeText(MainActivity.this, "Configuracion", Toast.LENGTH_SHORT).show();
                         break;
                 }
 
@@ -339,7 +363,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         FragmentTransaction transactionz = getSupportFragmentManager().beginTransaction();
         transactionz.replace(R.id.container, fragment, xp);
-        transactionz.addToBackStack(null);
+//        transactionz.addToBackStack(null);
         transactionz.commit();
 
 

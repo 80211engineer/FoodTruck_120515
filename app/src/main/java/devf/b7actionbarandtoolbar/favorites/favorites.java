@@ -9,7 +9,7 @@ import android.view.View;
 
 import devf.b7actionbarandtoolbar.R;
 
-public class favorites extends AppCompatActivity {
+public class favorites extends AppCompatActivity implements View.OnClickListener  {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,4 +34,8 @@ public class favorites extends AppCompatActivity {
         });
     }
 
+    @Override
+    public void onClick(View v) {
+
+    }
 }

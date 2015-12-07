@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical">
+
+
+
+    <android.support.v7.widget.Toolbar
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/login_toolbarz"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?attr/colorPrimary"
+        android:elevation="4dp"
+        android:minHeight="?attr/actionBarSize"
+        app:theme="@style/ToolbarTheme">
+
+
+    </android.support.v7.widget.Toolbar>
+
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:orientation="vertical"
+        android:gravity="center">
+
+
+
+
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/editTextLogin1"
+            android:hint="Username"
+            android:layout_gravity="center_horizontal" />
+
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:id="@+id/editTextLogin2"
+            android:hint="Password"
+            android:layout_gravity="center_horizontal" />
+
+        <Button
+            android:id="@+id/creater_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Login"/>
+
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="15dp"/>
+
+
+
+
+        <TextView
+            android:id="@+id/creater_registration"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="18sp"
+            android:textColor="#000000"
+            android:text=" Crear una nueva cuenta "/>
+
+
+    </LinearLayout>
+
+
+</LinearLayout>
+

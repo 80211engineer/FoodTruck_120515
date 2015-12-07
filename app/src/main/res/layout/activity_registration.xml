@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical">
+
+
+
+    <android.support.v7.widget.Toolbar
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/registration_toolbarz"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?attr/colorPrimary"
+        android:elevation="4dp"
+        android:minHeight="?attr/actionBarSize"
+        app:theme="@style/ToolbarTheme">
+
+
+    </android.support.v7.widget.Toolbar>
+
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:orientation="vertical"
+        android:gravity="center">
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Complete los siguientes campos."
+            android:textSize="18sp"/>
+
+
+
+
+
+        <EditText
+            android:id="@+id/registrationText_FirstName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Nombre"
+            android:layout_gravity="center_horizontal" />
+
+
+        <EditText
+            android:id="@+id/registrationText_LastName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Apellido"
+            android:layout_gravity="center_horizontal" />
+
+        <EditText
+            android:id="@+id/registrationText_ubicacion"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Ubicacion"
+            android:layout_gravity="center_horizontal" />
+
+        <EditText
+            android:id="@+id/registrationText_Email"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Email"
+            android:layout_gravity="center_horizontal" />
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Sexo"
+            android:textSize="18sp"/>
+
+
+        <RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:orientation="horizontal">
+
+            <RadioButton android:id="@+id/registration_male"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Masculino"
+                android:onClick="onRadioButtonClicked"/>
+
+            <RadioButton android:id="@+id/registration_female"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Femenino"
+                android:onClick="onRadioButtonClicked"/>
+
+            <RadioButton android:id="@+id/registration_none"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Prefiero no revelar"
+                android:onClick="onRadioButtonClicked"/>
+        </RadioGroup>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="30dp"/>
+
+
+        <EditText
+            android:id="@+id/registrationText_contrasena"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Contraseña"
+            android:layout_gravity="center_horizontal" />
+
+        <EditText
+            android:id="@+id/registrationText_contrasena_confi"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Confirmar contraseña"
+            android:layout_gravity="center_horizontal" />
+
+        <Button
+            android:id="@+id/registration_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Registrarse"/>
+
+
+        <TextView
+            android:id="@+id/registration_jump"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="JUMP FORWARD"
+            android:textSize="18sp"/>
+
+
+
+
+
+
+
+    </LinearLayout>
+
+
+</LinearLayout>
+
+

@@ -24,7 +24,14 @@ public class TruckAdapter extends RecyclerView.Adapter<TruckAdapter.TruckViewHol
 
     private List<TruckFood> mFoodTruck;
     private LayoutInflater mInflater;
-    private MyOwnListener myOwnListener;
+    private MyOwnListener myOwnListenerx;
+
+    private int currentViewHolder;
+    private int AvergeGradeTA;
+
+
+    //   Testing adding Stars
+    private TruckFood truckFoodz;
 
 
 
@@ -36,10 +43,30 @@ public class TruckAdapter extends RecyclerView.Adapter<TruckAdapter.TruckViewHol
     public TruckAdapter(Context context, List<TruckFood> truckFoods) {
         mInflater = LayoutInflater.from(context);
         this.mFoodTruck = truckFoods;
+
+        int sizeArray = mFoodTruck.size();
+
+
+
+        for(int i=0; i<sizeArray; i++){
+
+            truckFoodz = mFoodTruck.get(i);
+            AvergeGradeTA = truckFoodz.getTstars() + AvergeGradeTA;
+        }
+
+        AvergeGradeTA = AvergeGradeTA / sizeArray;
+
+        Log.e(TAG, "555 AvergeGradeTA: " + AvergeGradeTA );
+
+
     }
 
     public void setOnItemClickListener(MyOwnListener myOwnListener) {
-        this.myOwnListener = myOwnListener;
+        this.myOwnListenerx = myOwnListener;
+    }
+
+    public int averageReturner(){
+        return 911;
     }
 
 
@@ -61,12 +88,19 @@ public class TruckAdapter extends RecyclerView.Adapter<TruckAdapter.TruckViewHol
 
 
 
+        currentViewHolder = position + currentViewHolder;
+
+//        Log.e(TAG, "!!!!!!!!!!!!!!!!!!!!!!!  onBindViewHolder: " + currentViewHolder);
+
+
+
        // STUFF MISSING
         holder.setTcomment(truck.getTcomment());
         holder.setTimage(truck.getTimage());
         holder.setTname(truck.getTname());
-        Log.e(TAG, "onBindViewHolder: " + truck.getTname() );
+
         holder.setTstars(truck.getTstars());
+//        Log.e(TAG, " $$$$$$$$$  onBindViewHolder: " + truck.getTstars());
         holder.setTtypefood(truck.getTtypefood());
 
 
@@ -93,6 +127,7 @@ public class TruckAdapter extends RecyclerView.Adapter<TruckAdapter.TruckViewHol
         private TextView Ttypefood2;
         private ImageView Timage2;
         private TextView Tcomment2;
+        private int Tgrade;
 
         public TruckViewHolder(View itemView, int idImage, int idText1, int idText2) {
             super(itemView);
@@ -102,6 +137,7 @@ public class TruckAdapter extends RecyclerView.Adapter<TruckAdapter.TruckViewHol
             Timage2 = (ImageView) itemView.findViewById(R.id.truck_image);
             Tname2 = (TextView) itemView.findViewById(R.id.truck_name);
             Ttypefood2 = (TextView) itemView.findViewById(R.id.truck_type);
+
         }
 
 
@@ -111,7 +147,7 @@ public class TruckAdapter extends RecyclerView.Adapter<TruckAdapter.TruckViewHol
 
             TruckFood truckFood = mFoodTruck.get(getAdapterPosition());
 
-            myOwnListener.onItemClick(getAdapterPosition(),v, truckFood);
+            myOwnListenerx.onItemClick(getAdapterPosition(),v, truckFood);
 
         }
 
@@ -131,11 +167,21 @@ public class TruckAdapter extends RecyclerView.Adapter<TruckAdapter.TruckViewHol
 
         public void setTstars(int tstars) {
 
-//            Tstars = tstars;
+           this.Tstars = tstars;
+
+//            Log.e(TAG, "!!!!!!!!!!!!!!!!!!!!!!! 22 onBindViewHolder: " + Tstars);
         }
 
         public void setTtypefood(String ttypefood) {
             this.Ttypefood2.setText(ttypefood);
         }
+
+
+        public void setTgrade(int tgrade) {
+            Tgrade = currentViewHolder;
+        }
     }
+
+
+
 }

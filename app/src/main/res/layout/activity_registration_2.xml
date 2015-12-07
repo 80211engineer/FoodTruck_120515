@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical">
+
+
+
+    <android.support.v7.widget.Toolbar
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/registration2_toolbarz"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?attr/colorPrimary"
+        android:elevation="4dp"
+        android:minHeight="?attr/actionBarSize"
+        app:theme="@style/ToolbarTheme">
+
+
+    </android.support.v7.widget.Toolbar>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:orientation="vertical"
+        android:gravity="center">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="10dp"/>
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="22sp"
+        android:textColor="#000000"
+        android:text=" Bienvenido  "/>
+
+    <TextView
+        android:id="@+id/registration2_UserName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="22sp"
+        android:textColor="#000000"
+        />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="18sp"
+        android:textColor="#000000"
+        android:text=" Gracias por registrarte. \n Te gustaria subir una foto de perfil? "/>
+
+
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="5dp"/>
+
+
+
+
+
+        <Button
+            android:id="@+id/registration2_SelectPic"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Seleccionar foto"/>
+
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="25dp"/>
+
+
+        <TextView
+            android:id="@+id/registration2_ContinueButt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="18sp"
+            android:textColor="#000000"
+            android:text=" No gracias, continuar"/>
+
+
+
+
+
+
+
+    </LinearLayout>
+
+
+</LinearLayout>
+

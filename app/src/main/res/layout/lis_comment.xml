@@ -2,9 +2,7 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="#ffffff">
-
+    android:layout_height="match_parent">
 
     <!--
     <View
@@ -21,18 +19,17 @@
         android:orientation="horizontal">
 
 
-
         <de.hdodenhof.circleimageview.CircleImageView
-            android:id="@+id/truck_image"
+            android:id="@+id/image_UserComment"
             android:layout_width="72dp"
             android:layout_height="72dp"
             android:layout_marginLeft="16dp"
             android:layout_marginStart="16dp"
-            android:layout_marginTop="5dp"
+            android:layout_marginTop="8dp"
             android:scaleType="centerCrop"
             android:src="@drawable/myself"
-            android:contentDescription="Image of Truck"
-            android:paddingBottom="5dp"/>
+            android:contentDescription="User Pic in comment"
+            android:paddingBottom="8dp"/>
 
 
 
@@ -42,26 +39,50 @@
             android:layout_height="match_parent"
             android:background="@android:color/white"/>
 
+
+
+
+
+
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:orientation="vertical">
 
             <TextView
-                android:id="@+id/truck_name"
+                android:id="@+id/NameUser_comment"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:paddingRight="16dp"
-                android:hint="@string/Text_Truck_Name"
+                android:hint="Name User"
                 android:textColor="@android:color/black"
                 android:textSize="24sp"/>
 
             <TextView
-                android:id="@+id/truck_type"
+                android:id="@+id/date_comment"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:paddingRight="16dp"
-                android:hint="@string/Text_Truck_TypeFood"
+                android:hint="Date"
+                android:textColor="@android:color/black"
+                android:textSize="16sp"/>
+
+            <TextView
+                android:id="@+id/comment_comment"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingRight="16dp"
+                android:hint="Comment"
+                android:textColor="@android:color/black"
+                android:textSize="10sp"/>
+
+            <TextView
+                android:id="@+id/likes_comment"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingRight="16dp"
+                android:hint="Likes"
                 android:textColor="@android:color/black"
                 android:textSize="16sp"/>
 
@@ -73,7 +94,6 @@
 
 
     </LinearLayout>
-
 
     <!--
     <View
